@@ -1,0 +1,74 @@
+body {
+    background-color: rgb(255, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#quote-box{
+    color: red;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    position: fixed; /* or absolute */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.transition {
+    transition: 1.5s;
+}
+#text{
+    font-size: 24px;
+}
+.quote{
+    padding-right: 10px;
+}
+#author{
+    font-size: 16px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+.buttons{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.twitter {
+    color: red;
+}
+#tweet{
+    padding-top: 6.2px;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.new-button{
+    cursor: pointer;
+    color: white;
+    background-color: red;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.footer{
+    font-size: 10px;
+    text-align: center;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    #quote-box{
+        width: 80%;
+        height: auto;
+        
+    }
+    #text{
+        font-size: 18px;
+    }
+    
+  }
