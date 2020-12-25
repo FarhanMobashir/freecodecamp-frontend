@@ -10,7 +10,7 @@ https://farhanmobashir.github.io/freecodecamp-frontend/markdown-previewer/
 
 ## drum-machine
 
-https://farhanmobashir.github.io/freecodecamp-frontend/drum-machine/
+https://farhanmobashir.github.io/freecodecamp-frontend/drumpad-machine/
 
 
 
