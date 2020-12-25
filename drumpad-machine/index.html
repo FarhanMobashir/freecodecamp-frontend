@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Drum Machine</title>
+</head>
+
+<body>
+    <header>
+        <h1>Drum Machine</h1>
+    </header>
+    <main>
+        <div id="drum-machine">
+            <div id="display"></div>
+            <div class="keys" id="myDiv" tabindex="0">
+                <div class="drum-pad">Q<audio id="Q" class="clip" data-key="65" src="sounds/clap.wav"></audio></div>
+                <div class="drum-pad">W<audio id="W" class="clip" data-key="83" src="sounds/hihat.wav"></audio></div>
+                <div class="drum-pad">E<audio id="E" class="clip" data-key="68" src="sounds/kick.wav"></audio></div>
+                <div class="drum-pad">A<audio id="A" class="clip" data-key="70" src="sounds/openhat.wav"></audio></div>
+                <div class="drum-pad">S<audio id="S" class="clip" data-key="71" src="sounds/boom.wav"></audio></div>
+                <div class="drum-pad">D<audio id="D" class="clip" data-key="72" src="sounds/ride.wav"></audio></div>
+                <div class="drum-pad">Z<audio id="Z" class="clip" data-key="74" src="sounds/snare.wav"></audio></div>
+                <div class="drum-pad">X<audio id="X" class="clip" data-key="75" src="sounds/tom.wav"></audio></div>
+                <div class="drum-pad">C<audio id="C" class="clip" data-key="76" src="sounds/tink.wav"></audio></div>
+
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+<!-- User Story #1: I should be able to see an outer container with a corresponding id="drum-machine" that contains all other elements.
+
+User Story #2: Within #drum-machine I can see an element with a corresponding id="display".
+
+User Story #3: Within #drum-machine I can see 9 clickable drum pad elements, each with a class name of drum-pad, a unique id that describes the audio clip the drum pad will be set up to trigger, and an inner text that corresponds to one of the following keys on the keyboard: Q, W, E, A, S, D, Z, X, C. The drum pads MUST be in this order.
+
+User Story #4: Within each .drum-pad, there should be an HTML5 audio element which has a src attribute pointing to an audio clip, a class name of clip, and an id corresponding to the inner text of its parent .drum-pad (e.g. id="Q", id="W", id="E" etc.).
+
+User Story #5: When I click on a .drum-pad element, the audio clip contained in its child audio element should be triggered.
+
+User Story #6: When I press the trigger key associated with each .drum-pad, the audio clip contained in its child audio element should be triggered (e.g. pressing the Q key should trigger the drum pad which contains the string "Q", pressing the W key should trigger the drum pad which contains the string "W", etc.).
+
+User Story #7: When a .drum-pad is triggered, a string describing the associated audio clip is displayed as the inner text of the #display element (each string must be unique). -->

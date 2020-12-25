@@ -11,11 +11,11 @@ editorInput.addEventListener('keyup', mdParser);
 // functions
 
 function initParser() {
-    previewerOutput.innerHTML = marked(editorInput.value)
+    previewerOutput.innerHTML = marked(editorInput.value + `<br>`)
 }
 
 function mdParser(e) {
     // console.log(e.target.value);
-    previewerOutput.innerHTML = marked(e.target.value);
+    previewerOutput.innerHTML = marked(e.target.value, { breaks: true });
 
 }
