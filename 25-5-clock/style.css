@@ -1,0 +1,150 @@
+body{
+    background-color:rgb(42, 40, 40);
+    color: white;
+}
+
+header{
+    font-size: 44px;
+    text-align: center;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    
+}
+.main-container{
+    background-color: thistle;
+    color: rgb(42, 40, 40);
+    width: 50%;
+    border-radius: 5px;
+    height: 400px;
+}
+footer{
+ text-align: center;
+ margin-top: 30px;
+ font-size: large;   
+}
+button {
+    border-radius: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+    cursor: pointer;
+
+}
+.play{
+    background-color: green;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+}
+.pause{
+    background-color: yellow;
+    font-size: 20px;
+    padding: 10px;
+}
+.reset {
+    font-size: 20px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+}
+#session-label, #break-label {
+    margin-bottom: 10px;
+}
+.session-break{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    font-size: 24px;
+}
+.minus,.plus{
+    cursor: pointer;
+    background-color:wheat;
+    border: solid grey 2px;
+    width: 30px;
+    text-align: center;
+    font-weight: 900;
+}
+.display{
+    width: 50px;
+    background-color: white;
+    border: solid grey 2px;
+    color: black;
+    text-align: center;
+    height: 30px;
+}
+#timer-label{
+    text-align: center;
+    font-size: xx-large;
+}
+.counter{
+    display: flex;
+    /* flex-direction: row-reverse; */
+    justify-content: space-evenly;
+
+}
+.timer{
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+/* media-query */
+@media only screen and (max-width: 600px){
+
+    .session-break{
+        font-size: 14px;
+        text-align: center;
+        justify-content: space-around;
+    }
+    .main-container{
+        width: 90%;
+    }
+    .main{
+        margin-top: 100px;
+    }
+    .timer{
+        
+        font-size: 48px;
+    }
+    .play{
+        background-color: green;
+        font-size: 20px;
+        color: white;
+        padding: 10px;
+    }
+    .pause{
+        background-color: yellow;
+        font-size: 14px;
+        padding: 10px;
+    }
+    .reset {
+        font-size: 14px;
+        padding: 10px;
+        background-color: red;
+        color: white;
+    }
+    .minus,.plus{
+        background-color:wheat;
+        border: solid grey 2px;
+        width: 20px;
+        text-align: center;
+        font-weight: 900;
+    }
+    .display{
+        width: 25px;
+        background-color: white;
+        border: solid grey 2px;
+        color: black;
+        text-align: center;
+        height: auto;
+    }
+    .buttons{
+        margin-top: 40px;
+    }
+}
