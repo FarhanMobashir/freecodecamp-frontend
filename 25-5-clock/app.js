@@ -33,7 +33,7 @@
 
   // todo Fuctionss
   let minuteValue = sessionLength.innerHTML;
-
+  // let audioObj = new Audio("/25-5-clock/beep.mp3");
   console.log(minuteValue);
   let secondsValue = 5;
   let isStarted = false;
@@ -55,6 +55,7 @@
       }
       // breaktime = true;
       if (isPlaying === false) {
+        // audioObj.play();
         isPlaying = true;
         setTimeout(() => {
           timerLabel.innerHTML = "Session started...";
@@ -72,18 +73,26 @@
             if (secondsValue < 10) {
               seconds.innerHTML = "0" + secondsValue;
             }
-          } else {
-            --minuteValue;
-            minutes.innerHTML = minuteValue;
-            secondsValue = 5;
-
-            if (minuteValue === 0) {
+            if (secondsValue === 0) {
+              minuteValue--;
+              minutes.innerHTML = minuteValue;
+              secondsValue = 5;
+            }
+            // new copies from else
+            if (minuteValue === 0 && secondsValue === 1) {
               console.log(secondsValue);
               resetBreak();
               minuteValue = breakLength.innerHTML;
               play.innerHTML = "Break Time";
               breakTime();
             }
+          }
+          //  else if (secondsValue === 0) {
+          //   minuteValue--;
+          // }
+          else {
+            // minutes.innerHTML = minuteValue;
+            // secondsValue = 5;
           }
         }, 1000);
       } else {
@@ -146,14 +155,14 @@
     minuteValue = breakLength.innerHTML;
     breaktime = true;
     secondsValue = 5;
-    blinkTimerHide = setInterval(() => {
-      seconds.style.opacity = 0;
-      minutes.style.opacity = 0;
-    }, 1000);
-    blinkTimerShow = setInterval(() => {
-      seconds.style.opacity = 1;
-      minutes.style.opacity = 1;
-    }, 400);
+    // blinkTimerHide = setInterval(() => {
+    //   seconds.style.opacity = 0;
+    //   minutes.style.opacity = 0;
+    // }, 1000);
+    // blinkTimerShow = setInterval(() => {
+    //   seconds.style.opacity = 1;
+    //   minutes.style.opacity = 1;
+    // }, 400);
     breakTimer = setInterval(() => {
       secondsValue--;
       if (secondsValue >= 0) {
@@ -180,6 +189,12 @@
       if (!isStarted) {
         // if (minutes.innerHTML < 10) {
         //   minutes.innerHTML = "0" + minuteValue;
+        // }
+        // if (sessionLength.innerHTML < 10) {
+        //   sessionLength.innerHTML++;
+        //   minutes.innerHTML++;
+        //   minutes.innerHTML = "0" + minutes.innerHTML;
+        //   minuteValue++;
         // }
         sessionLength.innerHTML++;
         minutes.innerHTML++;
