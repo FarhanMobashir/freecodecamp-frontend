@@ -1,54 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/25-5-clock/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/25-5-clock/style.css" />
     <title>25 + 5 Clock</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>25+5 Clock</header>
     <div class="main">
-        <div class="main-container">
-            <div class="session-break">
-                <div class="break">
-                    <div id="break-label">Break Length</div>
-                    <div class="counter">
-                        <div class="minus" id="break-decrement">-</div>
-                        <div class="display" id="break-length">5</div>
-                        <div class="plus" id="break-increment">+</div>
-                    </div>
-                </div>
-                <div class="session">
-                    <div id="session-label">Session Length</div>
-                    <div class="counter">
-                        <div class="minus" id="session-decrement">-</div>
-                        <div class="display" id=".session-length">25</div>
-                        <div class="plus" id="session-increment">+</div>
-                    </div>
-                </div>
+      <div class="main-container">
+        <div class="session-break">
+          <div class="break">
+            <div id="break-label">Break Length</div>
+            <div class="counter">
+              <div class="minus" id="break-decrement">-</div>
+              <div class="display" id="break-length">2</div>
+              <div class="plus" id="break-increment">+</div>
             </div>
-            <div class="main-display-container">
-                <div class="main-display">
-                    <div id="timer-label">Session</div>
-                    <div class="timer" id="time-left">25 : 00</div>
-                </div>
-                <div class="buttons">
-                    <!-- <button class="pause">Pause</button> -->
-                    <button class="play" id="start_stop">Play/Pause</button>
-                    <button class="reset" id="reset">Reset</button>
-
-                </div>
+          </div>
+          <div class="session">
+            <div id="session-label">Session Length</div>
+            <div class="counter">
+              <div class="minus" id="session-decrement">-</div>
+              <div class="display" id="session-length">2</div>
+              <div class="plus" id="session-increment">+</div>
             </div>
+          </div>
         </div>
+        <div class="main-display-container">
+          <div class="main-display">
+            <div id="timer-label">Session</div>
+            <div class="timer" id="time-left">
+              <span class="minutes"> 2 </span>: <span class="seconds">00</span>
+            </div>
+          </div>
+          <div class="buttons">
+            <!-- <button class="pause">Pause</button> -->
+            <button class="play" id="start_stop">Play</button>
+            <button class="reset-btn" id="reset">Reset</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <footer>Design and Coded by Mobashir Farhan</footer>
+    <footer>Designed and Coded by Mobashir Farhan</footer>
     <script src="/25-5-clock/app.js"></script>
-</body>
-
+  </body>
 </html>
 
 <!-- 
