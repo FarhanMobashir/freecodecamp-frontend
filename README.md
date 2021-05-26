@@ -8,7 +8,7 @@ https://farhanmobashir.github.io/freecodecamp-frontend/random-quote-generator/
 
 https://farhanmobashir.github.io/freecodecamp-frontend/markdown-previewer/
 
-## pmodoro-timer
+## pomodoro-timer
 
 https://farhanmobashir.github.io/freecodecamp-frontend/25-5-clock/
 
