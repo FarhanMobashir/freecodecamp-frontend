@@ -213,17 +213,24 @@ button {
 
     color: white;
   }
+
+  .counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .minus,
   .plus {
     width: 20px;
-    height: 20px;
+    height: 30px;
+    font-size: 18px;
     text-align: center;
     font-weight: 900;
   }
   #session-label,
   #break-label {
     /* margin-left: 5px; */
-    font-size: 14px;
+    font-size: 18px;
     /* margin-right: 5px; */
   }
 
@@ -238,7 +245,8 @@ button {
 
   .display {
     width: 25px;
-    font-size: 14px;
+    font-size: 18px;
+    padding: 2px;
     text-align: center;
     height: auto;
   }
