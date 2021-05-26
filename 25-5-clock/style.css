@@ -1,27 +1,35 @@
 body {
-  background-color: rgb(42, 40, 40);
-  color: white;
+  /* background-color: rgb(42, 40, 40); */
+  /* color: white; */
+  font-family: "Lato", sans-serif;
 }
 
 header {
   font-size: 44px;
+  color: #585855;
+  font-weight: 700;
+  letter-spacing: 2px;
   text-align: center;
 }
 .main {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
-  padding: 20px;
+  margin-top: 30px;
+  padding: 10px;
 }
 .main-container {
   /* background-color: thistle; */
-  color: rgb(192, 192, 192);
-  border: 3px dashed thistle;
+  background: #ffffff;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
   width: 50%;
-  box-shadow: 0px 0px 20px grey;
+  padding-bottom: 20px;
+  height: auto;
+}
 
-  border-radius: 20px;
-  height: 400px;
+.minutes,
+.seconds {
+  margin: 0px 10px;
 }
 
 .playing-css {
@@ -31,6 +39,8 @@ footer {
   text-align: center;
   margin-top: 30px;
   font-size: large;
+  font-weight: 600;
+  color: #585855;
 }
 button {
   border-radius: 10px;
@@ -41,10 +51,11 @@ button {
   cursor: pointer;
 }
 .play {
-  background-color: rgb(1, 131, 1);
   font-size: 30px;
   color: white;
-  padding: 10px;
+  padding: 10px 20px;
+  background: #5222d0;
+  border-radius: 10px;
 }
 .pause {
   background-color: yellow;
@@ -52,64 +63,105 @@ button {
   padding: 10px;
 }
 .reset-btn {
-  font-size: 20px;
-  padding: 10px;
-  background-color: red;
+  background: #5222d0;
+  border-radius: 10px;
+  font-size: 24px;
+  padding: 10px 20px;
+  background-color: #ec615b;
   color: white;
 }
 #session-label,
 #break-label {
-  margin-bottom: 15px;
+  padding: 10px 5px;
   font-weight: 500;
-  padding-bottom: 10px;
-  border-bottom: 5px solid white;
+  font-size: 20px;
+  color: #ec615b;
 }
+
+.break,
+.session {
+  background: #ffffff;
+  box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
 .session-break {
   display: flex;
   justify-content: space-between;
-  padding: 40px;
+  /* padding: 40px; */
+  margin-top: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
   font-size: 24px;
+}
+
+.plus {
+  border-radius: 0px 4px 4px 0px;
+}
+.minus {
+  border-radius: 4px 0px 0px 4px;
 }
 .minus,
 .plus {
   cursor: pointer;
-  background-color: rgb(92, 91, 91);
-  border: solid grey 2px;
-  border-radius: 8px;
+  background-color: #ec615b;
   font-weight: 900;
-  margin: 0 5px;
+  /* margin: 0 5px; */
   color: white;
   width: 30px;
   text-align: center;
   font-weight: 900;
 }
 
+.counter {
+  display: flex;
+  justify-content: center;
+}
+
 .display {
   width: 45px;
-  background-color: white;
-  border: solid grey 2px;
-  border-radius: 8px;
-  color: black;
+  background: #ffffff;
+  font-size: 24px;
+  border: 2px solid #e6e6e6;
+  box-sizing: border-box;
+  color: #585855;
   text-align: center;
   height: 30px;
 }
 #timer-label {
   text-align: center;
-  font-size: xx-large;
+  color: #5222d0;
+  font-size: 38px;
+  font-weight: 600;
 }
-.counter {
-  display: flex;
-  /* flex-direction: row-reverse; */
-  justify-content: space-evenly;
+
+.anim {
+  margin-top: 0px;
+  width: 250px;
+  height: 250px;
 }
+
 .timer {
   display: flex;
   justify-content: center;
   font-size: 100px;
+  font-weight: bolder;
+  color: #585855;
 }
 .buttons {
   display: flex;
   justify-content: center;
+}
+
+.main-display-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* media-query */
@@ -118,57 +170,85 @@ button {
     font-size: 14px;
     text-align: center;
     justify-content: space-around;
+    background: none;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+  }
+  #timer-label {
+    font-size: 30px;
+  }
+
+  .animation {
+    margin-top: 0px;
+    width: 20px;
+    height: 150px;
   }
   .main-container {
-    width: 90%;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    background: none;
+    box-shadow: none;
   }
   .main {
-    margin-top: 100px;
+    margin-top: 0px;
   }
   .timer {
-    font-size: 48px;
+    font-size: 64px;
   }
   .play {
-    background-color: green;
-    font-size: 20px;
-    width: 150px;
+    font-size: 24px;
     color: white;
-    padding: 0 20px;
+    padding: 5px 20px;
   }
   .pause {
     background-color: yellow;
-    font-size: 14px;
-    padding: 10px;
+    font-size: 24px;
+    padding: 5px 10px;
   }
   .reset {
-    font-size: 14px;
-    padding: 10px;
-    background-color: red;
+    font-size: 24px;
+    padding: 5px 5px;
+    background-color: #ec615b;
+
     color: white;
   }
   .minus,
   .plus {
-    background-color: rgb(92, 91, 91);
-    margin: 0 5px;
-    border: solid grey 2px;
-    width: 25px;
+    width: 20px;
+    height: 20px;
     text-align: center;
     font-weight: 900;
   }
   #session-label,
   #break-label {
-    margin-left: 5px;
-    margin-right: 5px;
+    /* margin-left: 5px; */
+    font-size: 14px;
+    /* margin-right: 5px; */
   }
+
+  .session,
+  .break {
+    margin: 5px;
+    padding: 10px 0px;
+    background: none;
+    box-shadow: none;
+    border-radius: 5px;
+  }
+
   .display {
     width: 25px;
-    background-color: white;
-    border: solid grey 2px;
-    color: black;
+    font-size: 14px;
     text-align: center;
     height: auto;
   }
   .buttons {
-    margin-top: 40px;
+    margin-top: 10px;
+    font-size: 24px;
+  }
+  footer {
+    font-size: 14px;
+    font-weight: 600;
+    color: #585855;
   }
 }

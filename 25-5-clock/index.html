@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/25-5-clock/style.css" />
-    <title>25 + 5 Clock</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <title>Pomodoro Timer</title>
   </head>
 
   <body>
-    <header>25+5 Clock</header>
+    <header>Pomodoro Timer</header>
     <div class="main">
       <div class="main-container">
         <div class="session-break">
@@ -17,7 +18,7 @@
             <div id="break-label">Break Length</div>
             <div class="counter">
               <div class="minus" id="break-decrement">-</div>
-              <div class="display" id="break-length">2</div>
+              <div class="display" id="break-length">5</div>
               <div class="plus" id="break-increment">+</div>
             </div>
           </div>
@@ -25,16 +26,18 @@
             <div id="session-label">Session Length</div>
             <div class="counter">
               <div class="minus" id="session-decrement">-</div>
-              <div class="display" id="session-length">2</div>
+              <div class="display" id="session-length">25</div>
               <div class="plus" id="session-increment">+</div>
             </div>
           </div>
         </div>
         <div class="main-display-container">
+         
+
           <div class="main-display">
             <div id="timer-label">Session</div>
             <div class="timer" id="time-left">
-              <span class="minutes"> 2 </span>: <span class="seconds">00</span>
+              <span class="minutes"> 25 </span class="colon">: <span class="seconds">00</span>
             </div>
           </div>
           <div class="buttons">
@@ -42,9 +45,12 @@
             <button class="play" id="start_stop">Play</button>
             <button class="reset-btn" id="reset">Reset</button>
           </div>
+           <!-- <div class="animation1"></div>
+          <div class="animation2"></div> -->
         </div>
       </div>
     </div>
+    <audio class="beep" data-key="71" src="beep.mp3"></audio>
     <footer>Designed and Coded by Mobashir Farhan</footer>
     <script src="/25-5-clock/app.js"></script>
   </body>

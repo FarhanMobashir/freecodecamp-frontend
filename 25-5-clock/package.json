@@ -1,0 +1,11 @@
+{
+  "name": "25-5-clock",
+  "version": "1.0.0",
+  "description": "A pomodoro timer",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mobashir Farhan",
+  "license": "ISC"
+}
