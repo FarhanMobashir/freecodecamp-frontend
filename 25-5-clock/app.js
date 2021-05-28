@@ -76,6 +76,9 @@ function startTimer() {
     if (firstClick) {
       minuteValue--;
       minutes.innerHTML = minuteValue;
+      if (minuteValue < 10) {
+        minutes.innerHTML = "0" + minuteValue;
+      }
       firstClick = false;
     }
     if (isPlaying === false) {
