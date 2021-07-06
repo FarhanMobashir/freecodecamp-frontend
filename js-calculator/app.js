@@ -10,12 +10,9 @@ buttons.forEach((btn) => btn.addEventListener("click", main));
 // ? Functions
 let result = "";
 let mainResult = "";
-
+let equalClicked = false;
 function isOperator(n) {
-  let operator = ["+", "-", "/", "*"];
-  let set = new Set(operator);
-  // console.log(set);
-  if (set.has(n)) {
+  if (n === "+" || n === "-" || n === "/" || n === "*") {
     return true;
   } else {
     return false;
@@ -27,7 +24,7 @@ function updateMinDisplayForOperators(e) {
   // let curr = e.target.innerText;
   if (result.length < 30) {
     if (
-      isOperator(result[result.length - 1]) !== false &&
+      isOperator(result[result.length - 1]) === false &&
       result.length !== 0
     ) {
       if (
@@ -39,7 +36,6 @@ function updateMinDisplayForOperators(e) {
         result += e.target.innerText;
         console.log(result);
         console.log(isOperator(result[result.length - 1]));
-
         MinDisplay.innerText = result;
       }
     }
@@ -58,6 +54,12 @@ function updateMinDisplayForNumber(e) {
       e.target.innerText !== "." &&
       e.target.innerText !== "="
     ) {
+      if (equalClicked) {
+        result = "";
+        MinDisplay.innerText = "=>";
+        answer.innerText = "";
+        equalClicked = false;
+      }
       result += e.target.innerText;
       console.log(result);
       MinDisplay.innerText = result;
@@ -79,6 +81,7 @@ function getResult(e) {
   if (e.target.innerText === "=") {
     mainResult = eval(result);
     answer.innerText = mainResult;
+    equalClicked = true;
   }
 }
 
